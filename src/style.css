@@ -1,0 +1,199 @@
+/* ------------------------------------------------------------
+    ui styling
+
+    table of contents:
+    1.colors
+    2.reset
+    3.vendor
+        3.1.material-icons
+    4.components
+   ------------------------------------------------------------ */
+
+
+
+
+/* ------------------------------------------------------------
+    1.colors
+   ------------------------------------------------------------ */
+:root {
+    /* base color */
+    --def-clr-base-100: hsl(240, 3%, 90%);
+    --def-clr-base-200: hsl(240, 3%, 80%);
+    --def-clr-base-300: hsl(240, 3%, 70%);
+    --def-clr-base-400: hsl(240, 3%, 60%);
+    --def-clr-base-500: hsl(240, 3%, 50%);
+    --def-clr-base-600: hsl(240, 3%, 31%);
+    --def-clr-base-700: hsl(240, 3%, 24%);
+    --def-clr-base-800: hsl(240, 3%, 18%);
+    --def-clr-base-900: hsl(240, 3%, 13%);
+
+    /* main color */
+    --def-clr-main-100: hsl(214, 60%, 80%);
+    --def-clr-main-200: hsl(214, 60%, 70%);
+    --def-clr-main-300: hsl(214, 60%, 60%);
+    --def-clr-main-400: hsl(214, 60%, 50%);
+    --def-clr-main-500: hsl(214, 60%, 40%);
+    --def-clr-main-600: hsl(214, 60%, 31%);
+    --def-clr-main-700: hsl(214, 60%, 24%);
+    --def-clr-main-800: hsl(214, 60%, 18%);
+    --def-clr-main-900: hsl(214, 60%, 13%);
+
+    /* accent1 */
+    --def-clr-accent1-100: hsl(167, 40%, 80%);
+    --def-clr-accent1-200: hsl(167, 40%, 70%);
+    --def-clr-accent1-300: hsl(167, 40%, 60%);
+    --def-clr-accent1-400: hsl(167, 40%, 50%);
+    --def-clr-accent1-500: hsl(167, 40%, 40%);
+    --def-clr-accent1-600: hsl(167, 40%, 31%);
+    --def-clr-accent1-700: hsl(167, 40%, 24%);
+    --def-clr-accent1-800: hsl(167, 40%, 18%);
+    --def-clr-accent1-900: hsl(167, 40%, 13%);
+
+    /* accent2 */
+    --def-clr-accent2-100: hsl(261, 50%, 80%);
+    --def-clr-accent2-200: hsl(261, 50%, 70%);
+    --def-clr-accent2-300: hsl(261, 50%, 60%);
+    --def-clr-accent2-400: hsl(261, 50%, 50%);
+    --def-clr-accent2-500: hsl(261, 50%, 40%);
+    --def-clr-accent2-600: hsl(261, 50%, 31%);
+    --def-clr-accent2-700: hsl(261, 50%, 24%);
+    --def-clr-accent2-800: hsl(261, 50%, 18%);
+    --def-clr-accent2-900: hsl(261, 50%, 13%);
+
+    /* valid */
+    --def-clr-accent3-100: hsl(110, 60%, 80%);
+    --def-clr-accent3-200: hsl(110, 60%, 70%);
+    --def-clr-accent3-300: hsl(110, 60%, 60%);
+    --def-clr-accent3-400: hsl(110, 60%, 50%);
+    --def-clr-accent3-500: hsl(110, 60%, 40%);
+    --def-clr-accent3-600: hsl(110, 60%, 31%);
+    --def-clr-accent3-700: hsl(110, 60%, 24%);
+    --def-clr-accent3-800: hsl(110, 60%, 18%);
+    --def-clr-accent3-900: hsl(110, 60%, 13%);
+
+    /* error */
+    --def-clr-error-100: hsl(345, 88%, 80%);
+    --def-clr-error-200: hsl(345, 88%, 70%);
+    --def-clr-error-300: hsl(345, 88%, 60%);
+    --def-clr-error-400: hsl(345, 88%, 50%);
+    --def-clr-error-500: hsl(345, 88%, 40%);
+    --def-clr-error-600: hsl(345, 88%, 31%);
+    --def-clr-error-700: hsl(345, 88%, 24%);
+    --def-clr-error-800: hsl(345, 88%, 18%);
+    --def-clr-error-900: hsl(345, 88%, 13%);
+
+    /* highlight */
+    --def-clr-highlight-100: hsl(29, 80%, 80%);
+    --def-clr-highlight-200: hsl(29, 80%, 70%);
+    --def-clr-highlight-300: hsl(29, 80%, 60%);
+    --def-clr-highlight-400: hsl(29, 80%, 50%);
+    --def-clr-highlight-500: hsl(29, 80%, 40%);
+    --def-clr-highlight-600: hsl(29, 80%, 31%);
+    --def-clr-highlight-700: hsl(29, 80%, 24%);
+    --def-clr-highlight-800: hsl(29, 80%, 18%);
+    --def-clr-highlight-900: hsl(29, 80%, 13%);
+}
+
+
+
+/* ------------------------------------------------------------
+    2.reset
+   ------------------------------------------------------------ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role,
+   which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll
+   for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+
+/* ------------------------------------------------------------
+    3.vendor
+   ------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------
+    3.1.material-icons
+   ------------------------------------------------------------ */
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined');
+
+
+
+
+
+/* ------------------------------------------------------------
+    4.components
+   ------------------------------------------------------------ */
