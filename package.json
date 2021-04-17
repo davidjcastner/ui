@@ -20,6 +20,7 @@
         "react": "^17.0.2"
     },
     "devDependencies": {
+        "@davidjcastner/router": "^1.0.0",
         "@testing-library/react": "^11.2.6",
         "@types/html-webpack-plugin": "^3.2.5",
         "@types/jest": "^26.0.22",

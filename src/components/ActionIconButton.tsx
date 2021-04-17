@@ -2,6 +2,7 @@ import type { FunctionComponent } from 'react';
 import React from 'react';
 import { Icon } from './Icon';
 import { Tooltip } from './Tooltip';
+import { classify } from '../utility';
 
 /**
  * renders a square button with an icon
@@ -11,8 +12,14 @@ export const ActionIconButton: FunctionComponent<{
     icon?: string;
     tooltip?: string;
     disabled?: boolean;
-}> = ({ action, icon, tooltip, disabled }) => <button
-    className='ui-button ui-action-icon-button'
+    display?: boolean;
+}> = ({ action, icon, tooltip, disabled, display }) => <button
+    className={
+        classify(
+            'ui-button ui-action-icon-button',
+            { 'ui-is-hidden': Boolean(display) }
+        )
+    }
     type='button'
     onClick={action}
     disabled={disabled}>
