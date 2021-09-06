@@ -1,10 +1,10 @@
-import type { FunctionComponent } from 'react';
+import type { FC } from 'react';
 import React from 'react';
 
 /**
  * renders an icon
  */
-export const Icon: FunctionComponent<{ name: string }> = ({ name }) => <i
+export const Icon: FC<{ name: string }> = ({ name }) => <i
     className='ui-icon material-icons material-icons-outlined'>
     {name}
 </i>;

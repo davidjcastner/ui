@@ -1,14 +1,23 @@
-import type { FunctionComponent } from 'react';
-import React from 'react';
+import type { FC } from 'react';
+import type { ThemeContext } from '../types/ThemeContext';
+import React, { useState } from 'react';
+import { initialTheme, ThemeCtx } from '../context/theme';
+
 
 /** provides a set of colors for all components */
-export const Theme: FunctionComponent<{
-    colors: {
-        base: ThemeColor;
-        main: ThemeColor;
-        accent: ThemeColor;
-        valid: ThemeColor;
-        error: ThemeColor;
-        highlight: ThemeColor;
-    };
-}> = () => <div>home page</div>;
+export const Theme: FC<{
+    // colors: {
+    //     base: ThemeColor;
+    //     main: ThemeColor;
+    //     accents: Array<ThemeColor>;
+    //     valid: ThemeColor;
+    //     error: ThemeColor;
+    //     highlight: ThemeColor;
+    // };
+}> = ({ children }) => {
+    const [state, setState] = useState<ThemeContext>(initialTheme);
+    // TODO: add actions for theme changes
+    return <ThemeCtx.Provider value={state}>
+        {children}
+    </ThemeCtx.Provider>;
+};

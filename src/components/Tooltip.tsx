@@ -1,4 +1,4 @@
-import type { FunctionComponent } from 'react';
+import type { FC } from 'react';
 import React from 'react';
 
 /**
@@ -6,7 +6,7 @@ import React from 'react';
  *
  * Tooltip should be a child element of the intended target
  */
-export const Tooltip: FunctionComponent<{
+export const Tooltip: FC<{
     text?: string;
 }> = ({ text, children }) => <div className='ui-tooltip'>
     {

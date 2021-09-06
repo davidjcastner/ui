@@ -1,4 +1,4 @@
-import type { FunctionComponent } from 'react';
+import type { FC } from 'react';
 import React from 'react';
 import { Icon } from './Icon';
 import { Tooltip } from './Tooltip';
@@ -7,7 +7,7 @@ import { classify } from '../utility';
 /**
  * renders a square button with an icon
  */
-export const ActionIconButton: FunctionComponent<{
+export const ActionIconButton: FC<{
     action?: () => void;
     icon?: string;
     tooltip?: string;

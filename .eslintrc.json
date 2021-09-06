@@ -96,7 +96,11 @@
             "error",
             {
                 "min": 3,
-                "max": 20
+                "max": 20,
+                "exceptions": [
+                    "id",
+                    "up"
+                ]
             }
         ],
         "id-match": "error",
@@ -133,9 +137,12 @@
                 "skipComments": true
             }
         ],
-        "max-lines": "error",
+        "max-lines": "off",
         "max-nested-callbacks": "error",
-        "max-params": "error",
+        "max-params": [
+            "error",
+            4
+        ],
         "max-statements-per-line": [
             "error",
             {
@@ -143,7 +150,7 @@
             }
         ],
         "max-statements": [
-            "error",
+            "off",
             16
         ],
         "multiline-comment-style": "off",
@@ -216,7 +223,7 @@
         "no-loss-of-precision": "off",
         "no-magic-numbers": "off",
         "no-misleading-character-class": "error",
-        "no-mixed-operators": "error",
+        "no-mixed-operators": "off",
         "no-mixed-spaces-and-tabs": "error",
         "no-multi-assign": "error",
         "no-multi-spaces": "error",
@@ -241,7 +248,7 @@
         "no-octal-escape": "error",
         "no-octal": "error",
         "no-param-reassign": "error",
-        "no-plusplus": "error",
+        "no-plusplus": "off",
         "no-proto": "error",
         "no-prototype-builtins": "error",
         "no-redeclare": "off",
@@ -269,7 +276,7 @@
         "no-trailing-spaces": "error",
         "no-undef-init": "error",
         "no-undef": "error",
-        "no-undefined": "error",
+        "no-undefined": "off",
         "no-underscore-dangle": "error",
         "no-unexpected-multiline": "error",
         "no-unmodified-loop-condition": "error",
@@ -541,7 +548,7 @@
         "@typescript-eslint/no-array-constructor": "error",
         "@typescript-eslint/no-dupe-class-members": "error",
         "@typescript-eslint/no-duplicate-imports": "error",
-        "@typescript-eslint/no-empty-function": "error",
+        "@typescript-eslint/no-empty-function": "off",
         "@typescript-eslint/no-extra-parens": [
             "error",
             "all",
@@ -559,7 +566,7 @@
         "@typescript-eslint/no-shadow": "error",
         "@typescript-eslint/no-throw-literal": "error",
         "@typescript-eslint/no-unused-expressions": "error",
-        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-unused-vars": "off",
         "@typescript-eslint/no-use-before-define": "error",
         "@typescript-eslint/no-useless-constructor": "error",
         "@typescript-eslint/object-curly-spacing": [
@@ -625,7 +632,7 @@
         "react/jsx-no-comment-textnodes": "error",
         "react/jsx-no-duplicate-props": "error",
         "react/jsx-no-target-blank": "error",
-        "react/jsx-no-useless-fragment": "error",
+        "react/jsx-no-useless-fragment": "off",
         "react/jsx-one-expression-per-line": [
             "error",
             {

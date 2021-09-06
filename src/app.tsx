@@ -1,13 +1,19 @@
 // wraps the library for easy display in a web browser
 
-import type { FunctionComponent } from 'react';
+import type { FC } from 'react';
 import type { RouteDefinition } from '@davidjcastner/router';
 import React from 'react';
 import { render } from 'react-dom';
-import { RoutePage, RouteRegistry } from '@davidjcastner/router';
+import {
+    RoutePage,
+    RouteRegistry,
+} from '@davidjcastner/router';
+
+// library components
+import { Theme } from './index';
 
 // import all pages
-import { HomePage } from './examples/HomePage';
+import { HomePage } from './examples/pages/HomePage';
 
 // all route definitions
 export enum RouteName {
@@ -23,9 +29,11 @@ const routes: Array<RouteDefinition> = [
 ];
 
 // App - root Component
-const App: FunctionComponent = () => <RouteRegistry routes={routes}>
-    <RoutePage notFound={HomePage} />
-</RouteRegistry>;
+const App: FC = () => <Theme>
+    <RouteRegistry routes={routes}>
+        <RoutePage notFound={HomePage} />
+    </RouteRegistry>
+</Theme>;
 
 // construct a div for react to hook onto
 const reactTarget = document.createElement('div');
